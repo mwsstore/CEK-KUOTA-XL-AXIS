@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Sidompul Cek Kuota Xl Axis</title>
