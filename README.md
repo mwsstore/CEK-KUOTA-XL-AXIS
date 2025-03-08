@@ -1,6 +1,6 @@
+
 <html lang="en">
 <head>
-    <title>Sidompul Cek Kuota Xl Axis</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -14,113 +14,136 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-        body {
-            background: linear-gradient(135deg, #032B44, #0097A7);
-            font-family: 'Arial', sans-serif;
-            color: #333333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            margin-top: 20px;
-            margin-bottom: 100px;
-            padding: 20px;
-            background: #cfe4e5;
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
-            max-width: 90%;
-        }
-        .container:hover {
-            transform: scale(1.05);
-        }
-        h3 {
-            font-weight: bold;
-            color: #333333;
-        }
-        #hasilnya {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-top: 20px;
-        }
-        .alert {
-            background: #f1f1f1;
-            border: none;
-            color: #333333;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-        .form-control {
-            border-radius: 8px;
-            box-shadow: none;
-            border-color: #dddddd;
-            padding: 10px;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            border: none;
-            border-radius: 8px;
-            box-shadow: none;
-            padding: 10px 20px;
-            color: white;
-            cursor: pointer;
-            transition: background 0.3s ease-in-out;
-        }
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #2575fc, #6a11cb);
-        }
-        #cover-spin {
-            position: fixed;
-            width: 100%;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background-color: rgba(255, 255, 255, 0.7);
-            z-index: 9999;
-            display: none;
-        }
-        @-webkit-keyframes spin {
-            0% {
-                -webkit-transform: rotate(0deg);
-            }
-            100% {
-                -webkit-transform: rotate(360deg);
-            }
-        }
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        #cover-spin::after {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 40px;
-            height: 40px;
-            border-style: solid;
-            border-color: black;
-            border-top-color: transparent;
-            border-width: 4px;
-            border-radius: 50%;
-            -webkit-animation: spin .8s linear infinite;
-            animation: spin .8s linear infinite;
-            transform: translate(-50%, -50%);
-        }
+
+body {
+    background: linear-gradient(135deg, #032B44, #0097A7);
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    padding: 20px;
+    background: #cfe4e5;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    max-width: 90%;
+    width: 300px; /* tambahkan ukuran lebar */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    font-weight: bold;
+    color: #333333;
+    font-size: 18px; /* tambahkan ukuran font */
+}
+
+#hasilnya {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 16px; /* tambahkan ukuran font */
+}
+
+.alert {
+    background: #f1f1f1;
+    border: none;
+    color: #333333;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px; /* tambahkan ukuran font */
+}
+
+.form-control {
+    border-radius: 8px;
+    box-shadow: none;
+    border-color: #dddddd;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px; /* tambahkan ukuran font */
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-size: 16px; /* tambahkan ukuran font */
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+#cover-spin {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+    display: none;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#cover-spin::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-color: black;
+    border-top-color: transparent;
+    border-width: 4px;
+    border-radius: 50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+    transform: translate(-50%, -50%);
+}
     </style>
 
 </head>
